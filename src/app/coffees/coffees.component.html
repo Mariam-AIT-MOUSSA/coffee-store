@@ -1,9 +1,11 @@
 <div class="row main-container">
-  <div class="col-md-5">
-
+  <div class="col-md-5 side-photo-container">
+    <mat-card>
+      <img mat-card-image src="./../../assets/images/coffee-beans-backgound.jpg" alt="Photo of a cup of coffee">
+    </mat-card>
   </div>
   <div class="col-md-7">
-    <mat-card *ngFor="let item of pagesCoffeeList" class="coffee-item-card">
+    <mat-card *ngFor="let item of pagedCoffeeList" class="coffee-item-card">
       <mat-card-header>
         <mat-card-title>{{ item.blend_name }}</mat-card-title>
         <mat-card-subtitle>{{ item.variety }} - {{ item.origin }}</mat-card-subtitle>

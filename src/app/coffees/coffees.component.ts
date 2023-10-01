@@ -13,7 +13,7 @@ export class CoffeesComponent implements OnInit{
 
   coffeeList$ : Observable<CoffeeItem[]>;
   coffeeList: CoffeeItem[] = []; 
-  pagesCoffeeList: CoffeeItem[] = [];
+  pagedCoffeeList: CoffeeItem[] = [];
   pageSize = 5;
 
   constructor(private store: Store<{coffeeList : CoffeeItem[]}>){
@@ -28,13 +28,14 @@ export class CoffeesComponent implements OnInit{
 
   onPageChange(event: any): void {
     const pageIndex = event.pageIndex;
+    this.pageSize = event.pageSize;
     this.updatePagedData(pageIndex);
   }
 
   private updatePagedData(pageIndex: number): void {
     const startIndex = pageIndex * this.pageSize;
     const endIndex = startIndex + this.pageSize;
-    this.pagesCoffeeList = this.coffeeList.slice(startIndex, endIndex);
+    this.pagedCoffeeList = this.coffeeList.slice(startIndex, endIndex);
   }
   
 }

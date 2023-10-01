@@ -1,0 +1,10 @@
+.main-header{
+    background-color: #000000;
+    color: #f4f5f5;
+}
+.main-header .logo-icon{
+    color: #ff0000;
+}
+.spacer {
+    flex: 1 1 auto;
+}

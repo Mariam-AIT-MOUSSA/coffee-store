@@ -4,3 +4,9 @@
 .coffee-item-card{
     margin-bottom: 5px;
 }
+
+@media (max-width: 767.5px) {
+    .side-photo-container {
+      display: none;
+    }
+}
