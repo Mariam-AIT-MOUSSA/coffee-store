@@ -12,7 +12,6 @@ export class AppComponent implements OnInit{
   constructor(private store: Store){}
 
   ngOnInit(){
-    console.log('from app comp')
     this.store.dispatch(initCoffeeList()); 
   }
 }

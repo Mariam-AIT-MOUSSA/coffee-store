@@ -3,9 +3,6 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CoffeeItem } from './models/coffee-item.model';
 import { coffeeListSelector } from '../store/coffee-store/coffee.selector';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-coffees',
