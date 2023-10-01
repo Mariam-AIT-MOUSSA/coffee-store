@@ -3,6 +3,14 @@
     overflow-x: hidden;
 }
 
-.main-app-container{
-    margin: 5px 0 5px 0;
+.main-header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.main-app-container {
+    margin: 70px 0 5px 0;
 }
