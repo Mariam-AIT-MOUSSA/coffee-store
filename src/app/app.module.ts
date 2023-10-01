@@ -9,6 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoffeesComponent } from './coffees/coffees.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { coffeeListReducer } from './store/coffee-store/coffee.reducer';
+import { CoffeeEffect } from './store/coffee-store/coffee.effect';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -20,9 +26,17 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
-    BrowserAnimationsModule
+    StoreModule.forRoot({
+      coffeeList : coffeeListReducer
+    }),
+    EffectsModule.forRoot([
+      CoffeeEffect
+    ]),
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
