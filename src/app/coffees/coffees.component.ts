@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CoffeeItem } from './models/coffee-item.model';
@@ -12,24 +12,32 @@ import { MatSort } from '@angular/material/sort';
   templateUrl: './coffees.component.html',
   styleUrls: ['./coffees.component.css']
 })
-export class CoffeesComponent {
+export class CoffeesComponent implements OnInit{
 
   coffeeList$ : Observable<CoffeeItem[]>;
-  coffeeList : CoffeeItem[] = [];
-  dataSource = new MatTableDataSource<CoffeeItem>(this.coffeeList);
-  
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
- 
-  displayedColumns: string[] = ['blend_name', 'origin', 'variety', 'notes', 'intensifier'];
+  coffeeList: CoffeeItem[] = []; 
+  pagesCoffeeList: CoffeeItem[] = [];
+  pageSize = 5;
 
   constructor(private store: Store<{coffeeList : CoffeeItem[]}>){
     this.coffeeList$ = store.select(coffeeListSelector);
   }
-  
-  ngAfterViewInit() {
-    this.coffeeList$.subscribe(data=> this.dataSource.data = data);
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+  ngOnInit(){
+    this.coffeeList$.subscribe(data=> {
+      this.coffeeList = data;
+      this.updatePagedData(0);
+    }); 
   }
+
+  onPageChange(event: any): void {
+    const pageIndex = event.pageIndex;
+    this.updatePagedData(pageIndex);
+  }
+
+  private updatePagedData(pageIndex: number): void {
+    const startIndex = pageIndex * this.pageSize;
+    const endIndex = startIndex + this.pageSize;
+    this.pagesCoffeeList = this.coffeeList.slice(startIndex, endIndex);
+  }
+  
 }

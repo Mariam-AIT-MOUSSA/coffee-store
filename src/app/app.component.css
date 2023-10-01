@@ -1,3 +1,4 @@
 .main-page-container {
     background-color: #fbfbfb;
+    overflow-x: hidden;
 }

@@ -1,6 +1,6 @@
 export class CoffeeItem {
     
-    constructor(private id: number, private uid: string, private blend_name: string, private origin: string, private variety: string, private notes: string, private intensifier: string) {
+    constructor(public id: number, public uid: string, public blend_name: string, public origin: string, public variety: string, public notes: string, public intensifier: string) {
         this.id= id;
         this.uid= uid;
         this.blend_name= blend_name;
