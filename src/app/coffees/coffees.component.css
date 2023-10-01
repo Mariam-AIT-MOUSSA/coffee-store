@@ -1,9 +1,6 @@
 .main-container{
     padding: 2px;
 }
-.coffee-item-card{
-    margin-bottom: 5px;
-}
 
 @media (max-width: 767.5px) {
     .left-side-section {

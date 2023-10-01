@@ -17,13 +17,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { CoffeeItemComponent } from './coffees/coffee-item/coffee-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoffeesComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CoffeeItemComponent
   ],
   imports: [
     BrowserModule,
