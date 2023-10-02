@@ -1,3 +1,12 @@
 .coffee-item-card{
     margin-bottom: 5px;
 }
+
+.origin-data{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.origin-icon{
+    color: brown;
+}

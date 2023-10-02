@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  aboutThePageMessage : string = 'This is your coffee corner, welcome!'
 }
