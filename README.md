@@ -1,27 +1,34 @@
 # CoffeeStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Welcome to "Coffee Delights"!
 
-## Development server
+Explore a world of diverse coffee flavors from around the globe. This project is your passport to coffee adventures
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To run this project, follow this steps: 
+1. clone the repository: 
+git clone https://github.com/Mariam-AIT-MOUSSA/coffee-store.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. navigate to the project folder: 
+cd coffee-store
 
-## Build
+3. install all dependencies:
+npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4. run the projct: 
+ng serve
 
-## Running unit tests
+## Technical specifications
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Technologies used
 
-## Running end-to-end tests
+1. The front-end is built using Angular, 
+2. For styling, Angular Material and Bootstrap were used.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### API 
 
-## Further help
+Coffee data is fetched from: [https://random-data-api.com]
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Enjoy
