@@ -24,7 +24,8 @@ ng serve
 ### Technologies used
 
 1. The front-end is built using Angular, 
-2. For styling, Angular Material and Bootstrap were used.
+2. For styling, Angular Material and Bootstrap were used,
+3. NgRx is the state management library used. 
 
 ### API 
 
